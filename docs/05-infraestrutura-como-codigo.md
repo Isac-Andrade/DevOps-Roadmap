@@ -4,7 +4,7 @@
 
 ## Por que eu parei de clicar em console
 
-Eu configurava tudo pelo console do provedor de nuvem, no clique, achando que era mais rápido. Era, na primeira vez. Na segunda vez que precisei recriar o mesmo ambiente (um teste que deu errado e eu tive que refazer do zero), não lembrava exatamente quais opções eu tinha escolhido — e não tinha história nenhuma de mudança pra consultar. Foi aí que entendi o motivo de existir infraestrutura como código: não é sobre ser mais rápido na primeira vez, é sobre ser reproduzível e revisável depois.
+Eu configurava tudo pelo console do provedor de nuvem, no clique, achando que era mais rápido. Era, na primeira vez. Na segunda vez que precisei recriar o mesmo ambiente (um teste que deu errado e eu tive que refazer do zero), não lembrava exatamente quais opções eu tinha escolhido  e não tinha história nenhuma de mudança pra consultar. Foi aí que entendi o motivo de existir infraestrutura como código: não é sobre ser mais rápido na primeira vez, é sobre ser reproduzível e revisável depois.
 
 ```mermaid
 flowchart LR
@@ -17,7 +17,7 @@ flowchart LR
 
 ## Terraform: providers, state e plano
 
-Terraform é declarativo — você descreve o estado que quer, não o passo a passo pra chegar lá. Provider é o plugin que conversa com uma API específica.
+Terraform é declarativo  você descreve o estado que quer, não o passo a passo pra chegar lá. Provider é o plugin que conversa com uma API específica.
 
 ```hcl
 provider "aws" {
@@ -34,7 +34,7 @@ resource "aws_instance" "servidor_web" {
 }
 ```
 
-O state é onde o Terraform guarda o que ele acha que existe de fato, comparado ao que o código descreve. Eu editei o state manualmente uma vez, tentando "corrigir" algo rápido, e bagunçou a relação entre código e realidade — o próximo `apply` quis destruir coisa que eu não queria destruir. Nunca mais fiz isso. Hoje sei que o state tem que morar num backend remoto, principalmente em time, pra todo mundo trabalhar sobre o mesmo estado.
+O state é onde o Terraform guarda o que ele acha que existe de fato, comparado ao que o código descreve. Eu editei o state manualmente uma vez, tentando "corrigir" algo rápido, e bagunçou a relação entre código e realidade  o próximo `apply` quis destruir coisa que eu não queria destruir. Nunca mais fiz isso. Hoje sei que o state tem que morar num backend remoto, principalmente em time, pra todo mundo trabalhar sobre o mesmo estado.
 
 `terraform plan` mostra o que vai mudar antes de acontecer. Eu tinha o hábito de rodar `apply` direto sem olhar o plano, até um plano que eu não olhei recriar um recurso que eu não queria recriar. Hoje leio o plano inteiro, sempre, principalmente em produção.
 
@@ -57,11 +57,11 @@ module "rede" {
 }
 ```
 
-Se acho um erro na lógica da VPC, corrijo o módulo uma vez, e todo lugar que usa ele já fica corrigido — bem diferente de ter que lembrar de corrigir em cinco lugares copiados.
+Se acho um erro na lógica da VPC, corrijo o módulo uma vez, e todo lugar que usa ele já fica corrigido bem diferente de ter que lembrar de corrigir em cinco lugares copiados.
 
 ## Ansible: playbooks e roles
 
-Terraform provisiona a máquina, Ansible configura o que roda dentro dela. Não precisa de agente instalado — conecta via SSH e roda as tarefas do playbook.
+Terraform provisiona a máquina, Ansible configura o que roda dentro dela. Não precisa de agente instalado  conecta via SSH e roda as tarefas do playbook.
 
 ```yaml
 - hosts: servidores_web
@@ -79,15 +79,15 @@ Terraform provisiona a máquina, Ansible configura o que roda dentro dela. Não 
         enabled: true
 ```
 
-A palavra que eu não entendia direito no começo era idempotência: rodar o mesmo playbook duas vezes deveria dar o mesmo resultado, sem efeito colateral extra na segunda vez. A task de `apt` acima não reinstala nginx se ele já está lá — só garante o estado final. Eu escrevi um playbook usando `shell: echo linha >> arquivo` uma vez, sem perceber que isso duplicava a linha a cada execução — não era idempotente, e o arquivo de configuração ficou uma bagunça depois de rodar o playbook algumas vezes.
+A palavra que eu não entendia direito no começo era idempotência: rodar o mesmo playbook duas vezes deveria dar o mesmo resultado, sem efeito colateral extra na segunda vez. A task de `apt` acima não reinstala nginx se ele já está lá só garante o estado final. Eu escrevi um playbook usando `shell: echo linha >> arquivo` uma vez, sem perceber que isso duplicava a linha a cada execução  não era idempotente, e o arquivo de configuração ficou uma bagunça depois de rodar o playbook algumas vezes.
 
 ## Versionamento no Git
 
-Todo `.tf` e todo playbook vai pro Git, mesmo fluxo de PR que código de aplicação. O motivo prático: quando algo quebra em produção, o primeiro lugar que eu olho hoje é o histórico de mudanças recentes na infraestrutura — várias vezes o problema estava ali, numa mudança de duas semanas atrás que ninguém mais lembrava.
+Todo `.tf` e todo playbook vai pro Git, mesmo fluxo de PR que código de aplicação. O motivo prático: quando algo quebra em produção, o primeiro lugar que eu olho hoje é o histórico de mudanças recentes na infraestrutura  várias vezes o problema estava ali, numa mudança de duas semanas atrás que ninguém mais lembrava.
 
 ## Erros que eu cometi
 
-- State versionado no Git direto, sem backend remoto — contei acima o problema que isso causou.
+- State versionado no Git direto, sem backend remoto  contei acima o problema que isso causou.
 - `apply` sem olhar o `plan` primeiro, e um recurso indesejado sendo recriado.
 - Playbook não idempotente com `shell: echo ... >>`, arquivo duplicando conteúdo a cada execução.
 - Mudei algo manualmente no console "só dessa vez", e o Terraform detectou a divergência e tentou desfazer minha mudança manual no próximo `apply`.
@@ -97,7 +97,7 @@ Todo `.tf` e todo playbook vai pro Git, mesmo fluxo de PR que código de aplica�
 1. Escreve um módulo Terraform que provisiona a VPC da [etapa 02](./02-cloud-computing.md), reutilizável.
 2. Usa o módulo pra subir uma VM na sub-rede pública.
 3. Escreve um playbook Ansible que instala Docker nessa VM e garante o serviço ativo.
-4. Roda o mesmo playbook duas vezes seguidas — a segunda execução não deveria reportar nenhuma mudança.
+4. Roda o mesmo playbook duas vezes seguidas  a segunda execução não deveria reportar nenhuma mudança.
 5. **Confere:** roda `terraform plan` sem ter mudado nada no código. Deveria dizer "nenhuma alteração" — isso confirma que o state reflete a realidade.
 
 ## Perguntas que eu me faço
@@ -105,13 +105,13 @@ Todo `.tf` e todo playbook vai pro Git, mesmo fluxo de PR que código de aplica�
 <details>
 <summary>Por que nunca editar o state manualmente ou versionar ele junto com o código?</summary>
 
-O state conecta o código à infraestrutura real — editar na mão pode dessincronizar isso e causar destruição ou recriação acidental de recurso, como aconteceu comigo. Também pode ter dado sensível, e em time precisa estar num backend remoto compartilhado, senão cada pessoa trabalha sobre uma versão diferente do estado.
+O state conecta o código à infraestrutura real  editar na mão pode dessincronizar isso e causar destruição ou recriação acidental de recurso, como aconteceu comigo. Também pode ter dado sensível, e em time precisa estar num backend remoto compartilhado, senão cada pessoa trabalha sobre uma versão diferente do estado.
 </details>
 
 <details>
 <summary>O que quer dizer um playbook ser idempotente, na prática?</summary>
 
-Rodar várias vezes dá o mesmo resultado final, sem duplicar efeito. Importa porque playbook costuma ser reexecutado — sem idempotência, cada execução extra pode causar bagunça, como o arquivo de configuração duplicado que me aconteceu.
+Rodar várias vezes dá o mesmo resultado final, sem duplicar efeito. Importa porque playbook costuma ser reexecutado  sem idempotência, cada execução extra pode causar bagunça, como o arquivo de configuração duplicado que me aconteceu.
 </details>
 
 ## Termos que tive que procurar mais de uma vez
