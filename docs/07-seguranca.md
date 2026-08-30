@@ -4,7 +4,7 @@
 
 ## Por que deixei isso pro final (e por que quase me arrependi disso)
 
-Segurança foi a etapa que eu mais adiei — parecia burocracia, uma revisão chata no final de tudo. Mudei de ideia depois de rodar um scanner de vulnerabilidade numa imagem que eu já usava havia meses em teste e encontrar uma dependência com uma falha crítica catalogada, parada ali o tempo todo sem eu saber. Nada foi explorado, que eu saiba — mas foi o suficiente pra entender que segurança não pode ser a última coisa que você olha, tem que estar dentro do processo desde o início.
+Segurança foi a etapa que eu mais adiei  parecia burocracia, uma revisão chata no final de tudo. Mudei de ideia depois de rodar um scanner de vulnerabilidade numa imagem que eu já usava havia meses em teste e encontrar uma dependência com uma falha crítica catalogada, parada ali o tempo todo sem eu saber. Nada foi explorado, que eu saiba — mas foi o suficiente pra entender que segurança não pode ser a última coisa que você olha, tem que estar dentro do processo desde o início.
 
 ```mermaid
 flowchart LR
@@ -26,17 +26,17 @@ vault kv put secret/api/db senha="valor-secreto"
 vault kv get secret/api/db
 ```
 
-O que mudou de verdade pra mim foi entender rotação: segredo que nunca muda é um risco que só cresce com o tempo — se vazar uma vez, mesmo sem eu saber, continua valendo pra sempre. Um cofre com segredo de curta duração resolve isso.
+O que mudou de verdade pra mim foi entender rotação: segredo que nunca muda é um risco que só cresce com o tempo  se vazar uma vez, mesmo sem eu saber, continua valendo pra sempre. Um cofre com segredo de curta duração resolve isso.
 
 ## Varredura de vulnerabilidades
 
-Foi aqui que encontrei o problema que citei no início. Uso o Trivy hoje, integrado no pipeline — não como checagem manual esporádica, mas automática, a cada build.
+Foi aqui que encontrei o problema que citei no início. Uso o Trivy hoje, integrado no pipeline  não como checagem manual esporádica, mas automática, a cada build.
 
 ```bash
 trivy image minha-api:1.4.0
 ```
 
-Se aparece vulnerabilidade crítica, o pipeline falha, do mesmo jeito que falharia com teste quebrado. Antes eu rodava isso "de vez em quando, quando lembrava" — e foi exatamente por isso que uma vulnerabilidade ficou parada meses sem eu perceber.
+Se aparece vulnerabilidade crítica, o pipeline falha, do mesmo jeito que falharia com teste quebrado. Antes eu rodava isso "de vez em quando, quando lembrava"  e foi exatamente por isso que uma vulnerabilidade ficou parada meses sem eu perceber.
 
 ## IAM com privilégio mínimo
 
@@ -54,7 +54,7 @@ O erro que eu ainda pego às vezes: dar permissão ampla "só por agora, pra res
 
 ## Hardening de containers
 
-Reduzir o que não é estritamente necessário: rodar como não-root (retomando a [etapa 03](./03-containers.md)), sistema de arquivo somente-leitura quando dá, nada de ferramenta de debug na imagem final de produção.
+Reduzir o que não é estritamente necessário: rodar como não-root (retomando a [etapa 03](./03-containers.md)), sistema de arquivo somente leitura quando dá, nada de ferramenta de debug na imagem final de produção.
 
 ```yaml
 securityContext:
@@ -63,7 +63,7 @@ securityContext:
   allowPrivilegeEscalation: false
 ```
 
-Configurei isso depois do susto do scanner — três linhas que fecham bastante porta ao mesmo tempo: não roda como root, não escreve fora de volume explícito, não escala privilégio nem que algum processo interno tente.
+Configurei isso depois do susto do scanner  três linhas que fecham bastante porta ao mesmo tempo: não roda como root, não escreve fora de volume explícito, não escala privilégio nem que algum processo interno tente.
 
 ## Erros que eu cometi
 
@@ -110,4 +110,4 @@ Checagem roda automática a cada mudança, com critério claro de bloqueio igual
 
 ## Como me sinto tendo terminado a trilha
 
-Se você fez os exercícios de cada etapa, passou pelo ciclo inteiro: do terminal a um pipeline com deploy automatizado, infraestrutura versionada, observabilidade e segurança de verdade integradas — não só teoria separada. Pra mim, o que fez tudo se encaixar não foi nenhuma etapa isolada, foi aplicar junto num projeto pessoal depois. Recomendo fazer o mesmo antes de considerar que "terminou"  é usando que os conceitos separados viram um sistema só na cabeça.
+Se você fez os exercícios de cada etapa, passou pelo ciclo inteiro: do terminal a um pipeline com deploy automatizado, infraestrutura versionada, observabilidade e segurança de verdade integradas não só teoria separada. Pra mim, o que fez tudo se encaixar não foi nenhuma etapa isolada, foi aplicar junto num projeto pessoal depois. Recomendo fazer o mesmo antes de considerar que "terminou"  é usando que os conceitos separados viram um sistema só na cabeça.
