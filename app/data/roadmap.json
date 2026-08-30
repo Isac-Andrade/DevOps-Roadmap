@@ -1,0 +1,111 @@
+{
+  "stages": [
+    {
+      "id": "fund",
+      "order": 1,
+      "name": "Fundamentos",
+      "tagline": "Linux, redes, Git e Python",
+      "icon": "terminal",
+      "color": "#5AC8FA",
+      "items": [
+        { "text": "Linha de comando Linux: permissões, processos e systemd", "hours": 8 },
+        { "text": "Shell scripting em bash", "hours": 6 },
+        { "text": "Redes: TCP/IP, DNS e HTTP/HTTPS", "hours": 6 },
+        { "text": "Proxies reversos (nginx e HAProxy)", "hours": 4 },
+        { "text": "Git: branches, merge e rebase", "hours": 5 },
+        { "text": "Fluxo de trabalho com pull requests", "hours": 3 },
+        { "text": "Python para automação e scripts", "hours": 8 }
+      ]
+    },
+    {
+      "id": "cloud",
+      "order": 2,
+      "name": "Cloud computing",
+      "tagline": "IAM, redes e serviços gerenciados",
+      "icon": "cloud",
+      "color": "#34D1A0",
+      "items": [
+        { "text": "Modelo de responsabilidade compartilhada e IAM", "hours": 5 },
+        { "text": "Redes virtuais e sub-redes (VPC)", "hours": 5 },
+        { "text": "Máquinas virtuais e escalonamento", "hours": 6 },
+        { "text": "Armazenamento de objetos (S3 ou equivalente)", "hours": 4 },
+        { "text": "Bancos de dados gerenciados", "hours": 5 },
+        { "text": "Funções serverless (Lambda ou equivalente)", "hours": 5 }
+      ]
+    },
+    {
+      "id": "containers",
+      "order": 3,
+      "name": "Containers",
+      "tagline": "Docker e Kubernetes",
+      "icon": "box",
+      "color": "#FFB84D",
+      "items": [
+        { "text": "Imagens e Dockerfile", "hours": 6 },
+        { "text": "Orquestração local com docker-compose", "hours": 4 },
+        { "text": "Conceitos de Kubernetes: pods e deployments", "hours": 8 },
+        { "text": "Services, ingress e volumes", "hours": 6 },
+        { "text": "Helm charts", "hours": 5 },
+        { "text": "Registro e versionamento de imagens", "hours": 3 },
+        { "text": "Boas práticas para imagens enxutas", "hours": 3 }
+      ]
+    },
+    {
+      "id": "cicd",
+      "order": 4,
+      "name": "CI/CD",
+      "tagline": "Integração e entrega contínuas",
+      "icon": "infinity",
+      "color": "#FF6F91",
+      "items": [
+        { "text": "Fundamentos de integração contínua", "hours": 4 },
+        { "text": "Pipeline com GitHub Actions", "hours": 6 },
+        { "text": "Pipeline com GitLab CI", "hours": 5 },
+        { "text": "Testes automatizados no pipeline", "hours": 4 },
+        { "text": "Estratégias de deploy: blue-green e canário", "hours": 3 }
+      ]
+    },
+    {
+      "id": "iac",
+      "order": 5,
+      "name": "Infraestrutura como código",
+      "tagline": "Terraform e Ansible",
+      "icon": "code",
+      "color": "#A78BFA",
+      "items": [
+        { "text": "Terraform: providers, state e plano de execução", "hours": 8 },
+        { "text": "Módulos reutilizáveis em Terraform", "hours": 6 },
+        { "text": "Ansible: playbooks e roles", "hours": 7 },
+        { "text": "Versionamento de infraestrutura no Git", "hours": 4 }
+      ]
+    },
+    {
+      "id": "obs",
+      "order": 6,
+      "name": "Observabilidade",
+      "tagline": "Métricas, logs e alertas",
+      "icon": "activity",
+      "color": "#4DD9E8",
+      "items": [
+        { "text": "Métricas com Prometheus", "hours": 6 },
+        { "text": "Dashboards com Grafana", "hours": 5 },
+        { "text": "Centralização de logs (ELK ou Loki)", "hours": 6 },
+        { "text": "Alertas com Alertmanager", "hours": 3 }
+      ]
+    },
+    {
+      "id": "sec",
+      "order": 7,
+      "name": "Segurança",
+      "tagline": "DevSecOps na prática",
+      "icon": "shield",
+      "color": "#FF7A59",
+      "items": [
+        { "text": "Gerenciamento de segredos (Vault ou similar)", "hours": 5 },
+        { "text": "Varredura de vulnerabilidades em imagens", "hours": 4 },
+        { "text": "Políticas de IAM com privilégio mínimo", "hours": 5 },
+        { "text": "Hardening básico de containers", "hours": 4 }
+      ]
+    }
+  ]
+}
