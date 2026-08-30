@@ -155,7 +155,7 @@
       '<div class="rd-nav-right">' +
       '<a class="rd-nav-link" href="#rd-why">Por que esta trilha</a>' +
       '<a class="rd-nav-link" href="#rd-roadmap">Etapas</a>' +
-      '<a class="rd-nav-link" href="https://github.com/Isac-Andrade" target="_blank" rel="noopener">GitHub</a>' +
+      '<a class="rd-nav-link" href="https://github.com/Isac-Andrade/DevOps-Roadmap" target="_blank" rel="noopener">GitHub</a>' +
       '<button class="rd-nav-cta" data-action="go-next">Continuar estudando</button>' +
       '</div>' +
       '</nav>' +
