@@ -2,10 +2,6 @@
 
 > As anotações que fui escrevendo enquanto estudava DevOps, organizadas em uma trilha de 7 etapas — publicando porque teria adiantado muito se eu tivesse achado algo assim quando comecei.
 
-![Licença](https://img.shields.io/badge/licença-MIT-34D1A0)
-![PRs](https://img.shields.io/badge/PRs-bem--vindos-34D1A0)
-![Deploy](https://github.com/Isac-Andrade/DevOps-Roadmap/actions/workflows/deploy.yml/badge.svg)
-
 **[→ Acessar a trilha interativa](https://Isac-Andrade.github.io/DevOps-Roadmap/)** 
 
 ---
@@ -39,7 +35,7 @@ As 7 etapas aqui continuam sendo a base — fundamentos, containers/Kubernetes e
 Mas vale saber que o mercado está crescendo em cima dessa base em três direções específicas: **platform engineering** 
 (times criando plataformas internas que abstraem a infraestrutura pros devs), **AIOps** (automação de operações usando IA) 
 e a consolidação de **DevSecOps** como padrão, não opcional — essa última já é o foco da [etapa 07](./docs/07-seguranca.md) deste roadmap. 
- Quem terminar essa trilha tem a base pronta pra se especializar em qualquer uma dessas frentes depois.
+Quem terminar essa trilha tem a base pronta pra se especializar em qualquer uma dessas frentes depois.
 
 
 ## Como uso esses guias (e recomendo usar)
