@@ -76,7 +76,7 @@
   function toggleItem(sId, i) { state[itemId(sId, i)] = !state[itemId(sId, i)]; saveProgress(); render(); }
   function toggleStage(sId) { openStage = openStage === sId ? null : sId; render(); }
   function resetAll() {
-    if (!window.confirm('Vai desistir?')) return;
+    if (!window.confirm('Tem certeza que deseja reiniciar o seu progresso?')) return;
     state = {};
     saveProgress();
     render();
