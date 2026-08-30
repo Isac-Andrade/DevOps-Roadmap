@@ -76,7 +76,7 @@
   function toggleItem(sId, i) { state[itemId(sId, i)] = !state[itemId(sId, i)]; saveProgress(); render(); }
   function toggleStage(sId) { openStage = openStage === sId ? null : sId; render(); }
   function resetAll() {
-    if (!window.confirm('Tem certeza que deseja reiniciar todo o seu progresso?')) return;
+    if (!window.confirm('Vai desistir?')) return;
     state = {};
     saveProgress();
     render();
@@ -162,7 +162,7 @@
 
       '<section class="rd-hero"><div class="rd-inner">' +
       '<span class="rd-eyebrow">Minhas anotações de estudo · abertas pra qualquer um usar</span>' +
-      '<h1 class="rd-h1">O roadmap que eu queria ter encontrado quando comecei em <span class="rd-grad">WILLIAN</span></h1>' +
+      '<h1 class="rd-h1">O roadmap que eu queria ter encontrado quando comecei em <span class="rd-grad">DevOps</span></h1>' +
       '<p class="rd-lede">7 etapas, dos fundamentos de Linux à segurança em produção — na ordem que fez sentido pra mim, depois de tentar (e errar) o caminho mais curto duas vezes.</p>' +
       '<div class="rd-ctas">' +
       '<button class="rd-btn rd-btn-primary" data-action="go-next">' + (overall.done > 0 ? 'Continuar minha trilha' : 'Começar agora') + '</button>' +
