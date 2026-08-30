@@ -59,7 +59,7 @@ devops-roadmap/
 └── README.md
 ```
 
-O `app/data/roadmap.json` é a fonte única de verdade dos dados (etapas, tópicos, carga horária). O app lê esse arquivo em tempo de execução — para adicionar ou editar um tópico, basta editar o JSON.
+O `app/data/roadmap.json` é a fonte única de verdade dos dados (etapas, tópicos, carga horária). O app lê esse arquivo em tempo de execução  para adicionar ou editar um tópico, basta editar o JSON.
 
 ## Como rodar localmente
 
@@ -79,7 +79,7 @@ npx serve app
 
 ## Como contribuir
 
-Contribuições são bem-vindas — correções nos guias, novos recursos recomendados, melhorias no app. Veja [CONTRIBUTING.md](./CONTRIBUTING.md).
+Contribuições são bem-vindas correções nos guias, novos recursos recomendados, melhorias no app. Veja  [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## Licença
 
