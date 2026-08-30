@@ -46,7 +46,7 @@ O que funcionou pra mim: ler a etapa, fazer o exercício antes de olhar as respo
 ```
 devops-roadmap/
 ├── .github/workflows/deploy.yml   # publica app/ no GitHub Pages a cada push na main
-├── docs/                          # guia detalhado de cada etapa (markdown)
+├── docs/                          # guia detalhado de cada etapa
 ├── app/
 │   ├── index.html
 │   ├── assets/
