@@ -4,7 +4,7 @@
 
 ## Por que comecei por aqui
 
-Eu tentei pular direto pra Kubernetes duas vezes antes de escrever isso. Nas duas eu travei porque não sabia ler uma mensagem de erro de permissão, não entendia por que um `curl` funcionava do meu notebook mas não de dentro de um container, e não tinha a menor ideia do que era `rebase` além de "aquele comando que o Git sugere quando dá conflito". Comecei do zero de novo, dessa vez pela base, e valeu muito mais a pena. Se você está pensando em pular esta etapa porque "já sabe o básico de Linux", pelo menos garante que consegue explicar a diferença entre `chmod 755` e `chmod 750` sem procurar — se não conseguir, fica.
+Eu tentei pular direto pra Kubernetes duas vezes antes de escrever isso. Nas duas eu travei porque não sabia ler uma mensagem de erro de permissão, não entendia por que um `curl` funcionava do meu notebook mas não de dentro de um container, e não tinha a menor ideia do que era `rebase` além de "aquele comando que o Git sugere quando dá conflito". Comecei do zero de novo, dessa vez pela base, e valeu muito mais a pena. Se você está pensando em pular esta etapa porque "já sabe o básico de Linux", pelo menos garante que consegue explicar a diferença entre `chmod 755` e `chmod 750` sem procurar  se não conseguir, fica.
 
 ```mermaid
 flowchart LR
