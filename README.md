@@ -32,7 +32,7 @@ Se você está começando agora, espero que isso poupe algumas das voltas que eu
 
 **Total: ~190 horas de estudo, 37 tópicos.**
 
-## Nota sobre o mercado em 2026
+## Sobre o mercado em 2026
 
 Pesquisei rapidamente o cenário atual antes de fechar esse roadmap. 
 As 7 etapas aqui continuam sendo a base — fundamentos, containers/Kubernetes e segurança não saíram de moda. 
