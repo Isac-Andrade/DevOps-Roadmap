@@ -26,17 +26,7 @@ Se você está começando agora, espero que isso poupe algumas das voltas que eu
 | 06 | Observabilidade — métricas, logs e alertas | ~20h | [docs/06-observabilidade.md](./docs/06-observabilidade.md) |
 | 07 | Segurança — DevSecOps na prática | ~18h | [docs/07-seguranca.md](./docs/07-seguranca.md) |
 
-**Total: ~190 horas de estudo, 37 tópicos.**
-
-## Sobre o mercado em 2026
-
-Pesquisei rapidamente o cenário atual antes de fechar esse roadmap. 
-As 7 etapas aqui continuam sendo a base — fundamentos, containers/Kubernetes e segurança não saíram de moda. 
-Mas vale saber que o mercado está crescendo em cima dessa base em três direções específicas: **platform engineering** 
-(times criando plataformas internas que abstraem a infraestrutura pros devs), **AIOps** (automação de operações usando IA) 
-e a consolidação de **DevSecOps** como padrão, não opcional — essa última já é o foco da [etapa 07](./docs/07-seguranca.md) deste roadmap. 
-Quem terminar essa trilha tem a base pronta pra se especializar em qualquer uma dessas frentes depois.
-
+**Total:  37 tópicos.**
 
 ## Como uso esses guias (e recomendo usar)
 
