@@ -1,6 +1,6 @@
 # Roadmap DevOps
 
-> As anotações que fui escrevendo enquanto estudava DevOps, organizadas em uma trilha de 7 etapas — publicando porque teria adiantado muito se eu tivesse achado algo assim quando comecei.
+> As anotações que fui escrevendo enquanto estudava DevOps, organizadas em uma trilha de 7 etapas  publicando porque teria adiantado muito se eu tivesse achado algo assim quando comecei.
 
 **[→ Acessar a trilha interativa](https://Isac-Andrade.github.io/DevOps-Roadmap/)** 
 
@@ -8,7 +8,7 @@
 
 ## Sobre este repositório
 
-Comecei a estudar DevOps sem saber muito bem por onde ir — tentei pular direto pra Kubernetes duas vezes e voltei pra estaca zero as duas. O que funcionou, no fim, foi seguir uma ordem que respeitasse os fundamentos, e ir documentando o que aprendia, os erros que cometia no meio do caminho, e o que eu queria ter lido antes de tropeçar em cada coisa.
+Comecei a estudar DevOps sem saber muito bem por onde ir tentei pular direto pra Kubernetes duas vezes e voltei pra estaca zero as duas. O que funcionou, no fim, foi seguir uma ordem que respeitasse os fundamentos, e ir documentando o que aprendia, os erros que cometia no meio do caminho, e o que eu queria ter lido antes de tropeçar em cada coisa.
 
 Este repositório é isso, organizado: um guia por etapa (`/docs`), escrito em primeira pessoa mesmo, com os erros que cometi e o que fez sentido pra mim entender cada conceito não é um manual genérico, é mais parecido com um caderno de estudo. E um app (`/app`) pra acompanhar o progresso, porque marcar item concluído ajuda a manter o ritmo.
 
@@ -79,7 +79,7 @@ npx serve app
 
 ## Como contribuir
 
-Contribuições são bem-vindas correções nos guias, novos recursos recomendados, melhorias no app. Veja  [CONTRIBUTING.md](./CONTRIBUTING.md).
+Contribuições são bem vindas correções nos guias, novos recursos recomendados, melhorias no app. Veja  [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## Licença
 
