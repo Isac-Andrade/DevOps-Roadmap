@@ -188,7 +188,7 @@
       '</div></section>' +
 
       '<section id="rd-why"><div class="rd-inner">' +
-      '<div class="rd-section-head"><p class="rd-section-eyebrow">Por que organizei assim</p><h2 class="rd-h2">O caminho que eu queria ter seguido desde o início</h2><p class="rd-section-sub">Sem atalho — foi tentando encurtar que eu mais perdi tempo.</p></div>' +
+      '<div class="rd-section-head"><p class="rd-section-eyebrow">Organizado conforme o padrão que utilizei para estudar</p><h2 class="rd-h2">O caminho que eu queria ter seguido desde o início</h2><p class="rd-section-sub">Sem atalho — foi tentando encurtar que eu mais perdi tempo.</p></div>' +
       '<div class="rd-values">' + VALUES.map(valueCard).join('') + '</div>' +
       '</div></section>' +
 
