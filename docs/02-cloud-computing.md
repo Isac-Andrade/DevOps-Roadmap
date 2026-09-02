@@ -1,6 +1,6 @@
 # 02· Cloud computing
 
-**Tempo que gastei aqui:** ~30h · **Pré©-requisitos:** [01· Fundamentos](./01-fundamentos.md) · **Próximo:** [03 · Containers ’](./03-containers.md)
+**Tempo que gastei aqui:** ~30h · **Pré-requisitos:** [01· Fundamentos](./01-fundamentos.md) · **Próximo:** [03 · Containers ](./03-containers.md)
 
 ## Por que essa etapa vem logo depois dos fundamentos
 
@@ -116,8 +116,8 @@ Serverless Ã© feito pra execuÃ§Ã£o curta e reativa a evento. Processo long
 ## Onde eu fui aprofundar
 
 - [AWS Documentation](https://docs.aws.amazon.com/)
-- [Microsoft Learn â€” Azure](https://learn.microsoft.com/azure/)
+- [Microsoft Learn ” Azure](https://learn.microsoft.com/azure/)
 - [Google Cloud Documentation](https://cloud.google.com/docs)
 
 ---
-**Próxima etapa:** [03· Containers ’](./03-containers.md)
+**Próxima etapa:** [03· Containers ](./03-containers.md)
