@@ -116,7 +116,7 @@ Serverless Ã© feito pra execuÃ§Ã£o curta e reativa a evento. Processo long
 ## Onde eu fui aprofundar
 
 - [AWS Documentation](https://docs.aws.amazon.com/)
-- [Microsoft Learn ” Azure](https://learn.microsoft.com/azure/)
+- [Microsoft Learn Azure](https://learn.microsoft.com/azure/)
 - [Google Cloud Documentation](https://cloud.google.com/docs)
 
 ---
