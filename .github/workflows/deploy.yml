@@ -20,6 +20,8 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true  
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,8 +32,11 @@ jobs:
       - name: Upload do artefato (pasta app/)
         uses: actions/upload-pages-artifact@v3
         with:
+          name: app-artifact   
           path: "./app"
 
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: app-artifact  
