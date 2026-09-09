@@ -76,7 +76,7 @@
   function toggleItem(sId, i) { state[itemId(sId, i)] = !state[itemId(sId, i)]; saveProgress(); render(); }
   function toggleStage(sId) { openStage = openStage === sId ? null : sId; render(); }
   function resetAll() {
-    if (!window.confirm('Tem certeza que deseja reiniciar o seu progresso?')) return;
+    if (!window.confirm('Tem certeza que deseja reiniciar todo o seu progresso?')) return;
     state = {};
     saveProgress();
     render();
@@ -155,7 +155,7 @@
       '<div class="rd-nav-right">' +
       '<a class="rd-nav-link" href="#rd-why">Por que esta trilha</a>' +
       '<a class="rd-nav-link" href="#rd-roadmap">Etapas</a>' +
-      '<a class="rd-nav-link" href="https://github.com/Isac-Andrade/DevOps-Roadmap" target="_blank" rel="noopener">GitHub</a>' +
+      '<a class="rd-nav-link" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>' +
       '<button class="rd-nav-cta" data-action="go-next">Continuar estudando</button>' +
       '</div>' +
       '</nav>' +
@@ -188,7 +188,7 @@
       '</div></section>' +
 
       '<section id="rd-why"><div class="rd-inner">' +
-      '<div class="rd-section-head"><p class="rd-section-eyebrow">Organizado conforme o padrão que utilizei para estudar</p><h2 class="rd-h2">O caminho que eu queria ter seguido desde o início</h2><p class="rd-section-sub">Sem atalho — foi tentando encurtar que eu mais perdi tempo.</p></div>' +
+      '<div class="rd-section-head"><p class="rd-section-eyebrow">Por que organizei assim</p><h2 class="rd-h2">O caminho que eu queria ter seguido desde o início</h2><p class="rd-section-sub">Sem atalho — foi tentando encurtar que eu mais perdi tempo.</p></div>' +
       '<div class="rd-values">' + VALUES.map(valueCard).join('') + '</div>' +
       '</div></section>' +
 
